@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Outfit", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 a{
   text-decoration: none;
@@ -13,5 +14,6 @@ a{
 .app{
   min-height: 100vh;
   color: white;
-  background: linear-gradient(#4e4e4e, #2e2e2e, #1a1a1a);
+  /* background: linear-gradient(#4e4e4e, #2e2e2e, #1a1a1a); */
+  background: linear-gradient(180deg, #12122e 0%, #272764 100%);
 }

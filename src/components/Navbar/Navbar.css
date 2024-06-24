@@ -32,7 +32,7 @@
     cursor: pointer;
 }
 .navbar option{
-    background-color: #4e4e4e;
+    background: #12122e;
     color: white;
 }
 .navbar button{
@@ -62,6 +62,9 @@
     }
 }
 @media (max-width: 768px) {
+    .navbar .logo{
+        width: 140px;
+    }
     .navbar{
         padding: 20px 5%;
     }

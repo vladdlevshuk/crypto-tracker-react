@@ -3,6 +3,7 @@ import './Navbar.css'
 import logo from '../../assets/logo.png'
 import arrow_icon from '../../assets/arrow_icon.png'
 import { CoinContext } from '../../context/CoinContext'
+import { Link } from 'react-router-dom'
 
 export const Navbar = () => {
 
@@ -31,12 +32,14 @@ export const Navbar = () => {
 
   return (
     <div className='navbar'>
-        <img src={logo} alt="Logo" className="logo" />
+        <Link to={'/crypto-tracker-react'}>
+            <img src={logo} alt="Logo" className="logo" />
+        </Link>
         <ul>
-            <li>Home</li>
-            <li>Features</li>
-            <li>Picing</li>
-            <li>Blog</li>
+            <Link to={'/crypto-tracker-react'}><li>Home</li></Link>
+            <li>Soon..</li>
+            <li>Soon..</li>
+            <li>Soon..</li>
         </ul>
         <div className="nav-right">
             <select onChange = {currencyHandler}>
@@ -44,7 +47,7 @@ export const Navbar = () => {
                 <option value="eur">EUR</option>
                 <option value="rub">RUB</option>
             </select>
-            <button>Sign Up <img src={arrow_icon} alt="" /></button>
+            <button>Soon ..<img src={arrow_icon} alt="Sign up" /></button>
         </div>
     </div>
   )

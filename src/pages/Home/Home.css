@@ -1,6 +1,9 @@
 .home{
     padding: 0px 10px;
-    padding-bottom: 100px;
+    background-image: url(../../assets/hero1.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
 }
 .hero{
     max-width: 600px;
@@ -40,18 +43,69 @@
 }
 .hero button{
     border: none;
-    background: #5163a6;
+    background: linear-gradient(#30bddc 0%, #5189e1 100%);
     color: white;
     font-size: 16px;
     padding: 10px 30px;
     border-radius: 5px;
     cursor: pointer;
 }
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+.clear-button{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 28px;
+    color: #999;
+}
+.clear-button:hover{
+    color: #000;
+}
+.crypto-table-container {
+    max-width: 800px;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
 .crypto-table{
     max-width: 800px;
     margin: auto;
-    background: linear-gradient(#323232, #2e2e2e, #272727);
+    background: linear-gradient(180deg, #12122e 0%, #272764 100%);
     border-radius: 15px;
+    overflow: auto;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: white;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#30bddc 0%, #5189e1 100%);
+    border-radius: 1px;
+}
+.crypto-table-header {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
+    padding: 15px 20px;
+    align-items: center;
+    border-bottom: 1px solid #3c3c3c;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(#30bddc 0%, #5189e1 100%);
+    z-index: 1;
+}
+.crypto-content {
+    max-height: calc(100vh - 360px);
+    overflow-y: auto;
 }
 .table-layout{
     display: grid;
@@ -83,6 +137,13 @@
     text-align: center;
 }
 @media (max-width: 768px) {
+    .crypto-table-header{
+        grid-template-columns: 0.5fr 3fr 1fr 1fr;
+    }
+    .crypto-content{
+        overflow: hidden;
+        max-height: 559px;
+    }
     .table-layout{
         grid-template-columns: 0.5fr 3fr 1fr 1fr;
     }
